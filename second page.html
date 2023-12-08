@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+			background-image: url('bbb2.png');
+            background-size: cover;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .btn {
+            background-color: #595EFF;
+            border: none;
+            color: white;
+            padding: 12px 16px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 5px;
+            border-radius: 25px; 
+        }
+
+        .btn:hover {
+            background-color: #2E86C1;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+            width: 450px;
+            height: 250px;
+            margin: 10px;
+            perspective: 1000px;
+        }
+
+        .card-inner {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        .card.active .card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .card-front,
+        .card-back {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+        }
+
+        .card-back {
+            transform: rotateY(180deg);
+            background: #0D4DFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .text {
+            color: #fff;
+        }
+
+        .footer {
+            background-color: #71F5E8;
+            color: #333;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .black-banner {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .thank-you-text {
+            font-size: 30px;
+        }
+	.p1{
+	text-align:center;
+}
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1 style="color: #0D4DFF; font-size: 40px; font-family: Montserrat;">What to Do for Sustainable Transportation and Urban Planning</h1>
+        <button class="btn" onclick="window.location.href = 'temp 2.html';">Home</button>
+
+        <button class="btn" onclick="window.location.href = 'https://www.google.com/';">Search</button>
+        <button class="btn" onclick="window.location.href = 'https://www.facebook.com/groups/296268770393981/';">Group</button>
+        <button class="btn" onclick="window.location.href = 'second page.html';">To Do</button>
+        <button class="btn" onclick="window.location.href = 'page 3.html';">Not To Do</button>
+    </div>
+<div class="p1">
+<p>Please click these flipable cards</P>
+</div>
+    <div class="card-container">
+        <div class="card" onclick="rotateCard(this)">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="https://via.placeholder.com/450x250" alt="Image 1">
+                </div>
+                <div class="card-back">
+                    <div class="text"><b>Promote Walkability:<b> Invest in well-maintained pedestrian infrastructure to encourage walking and reduce reliance on cars, mitigating traffic congestion and air pollution.
+</div>
+                </div>
+            </div>
+        </div>
+        <!-- Add more card elements here -->
+        <div class="card" onclick="rotateCard(this)">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="https://via.placeholder.com/450x250" alt="Image 2">
+                </div>
+                <div class="card-back">
+                    <div class="text"><b>Efficient Public Transit:<b> Implement modern and efficient public transportation systems to provide accessible and sustainable alternatives to private vehicles, reducing carbon emissions and traffic congestion.</div>
+                </div>
+            </div>
+        </div>
+        <div class="card" onclick="rotateCard(this)">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="https://via.placeholder.com/450x250" alt="Image 3">
+                </div>
+                <div class="card-back">
+                    <div class="text"><b>Integrate Green Spaces:<b> Prioritize the inclusion of green spaces and natural habitats in urban planning to enhance biodiversity, mitigate the urban heat island effect, and improve the overall well-being of residents.
+
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional Row of Cards -->
+    <div class="card-container">
+        <div class="card" onclick="rotateCard(this)">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="https://via.placeholder.com/450x250" alt="Image 4">
+                </div>
+                <div class="card-back">
+                    <div class="text"><b>Prioritize Sustainable Design:<b> Focus on sustainable and people-centric urban design to discourage car-centric communities, promoting sustainable transportation and reducing environmental degradation.
+</div>
+                </div>
+            </div>
+        </div>
+        <div class="card" onclick="rotateCard(this)">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="https://via.placeholder.com/450x250" alt="Image 5">
+                </div>
+                <div class="card-back">
+                    <div class="text"><b>Integrated Planning:<b> Emphasize integrated land use and transportation planning to create efficient spatial layouts, reduce travel distances, and foster cohesive communities, addressing social and environmental challenges.</div>
+                </div>
+            </div>
+        </div>
+        <div class="card" onclick="rotateCard(this)">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="https://via.placeholder.com/450x250" alt="Image 6">
+                </div>
+                <div class="card-back">
+                    <div class="text"><b>Resilient Infrastructure:<b> Integrate resilient infrastructure solutions to prepare cities for the adverse impacts of climate change, ensuring long-term sustainability and resilience for urban communities.
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of Additional Row -->
+
+    <div class="content">
+        <!-- Your website content goes here -->
+    </div>
+
+    <div class="footer">
+        <p>© 2023 YourWebsiteName. All rights reserved.</p>
+        <p>Designed for a Sustainable Future</p>
+    </div>
+
+    <div class="black-banner">
+        <p class="thank-you-text">Thank you for visiting</p>
+    </div>
+
+    <script>
+        function rotateCard(element) {
+            element.classList.toggle("active");
+        }
+    </script>
+</body>
+
+</html>
